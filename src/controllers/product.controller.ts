@@ -94,12 +94,16 @@ export const updateProduct = async (
 ): Promise<void> => {
   try {
     const id = parseInt(req.params.id);
+    console.log(id);
+    
     if (isNaN(id)) {
       res.status(400).json({ message: "Invalid product ID" });
       return;
     }
 
     const { name, price } = req.body;
+    console.log(name, price);
+    
     const product = await productRepo.findOneBy({ id });
 
     if (!product) {
