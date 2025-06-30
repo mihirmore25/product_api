@@ -2,7 +2,12 @@ import { DataSource } from "typeorm";
 import { Product } from "../entities/Product";
 import dotenvx from "@dotenvx/dotenvx";
 
-dotenvx.config();
+dotenvx.config({
+  path:
+    process.env.NODE_ENV === "production"
+      ? ".env.production"
+      : ".env.development",
+});
 
 export const AppDataSource = new DataSource({
   type: "mysql",

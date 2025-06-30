@@ -6,7 +6,8 @@
     "start": "dotenvx run -f .env.development -- npx ts-node-dev src/index.ts",
     "dev": "dotenvx run -f .env.development -- npx ts-node-dev src/index.ts",
     "dev:env:encrypt": "dotenvx encrypt -f .env.development",
-    "dev:env:decrypt": "dotenvx decrypt -f .env.development"
+    "dev:env:decrypt": "dotenvx decrypt -f .env.development",
+    "start:prod": "NODE_ENV=prodcution dotenvx run -f .env.prodcution -- npx ts-node-dev src/index.ts"
   },
   "keywords": [],
   "author": "",
