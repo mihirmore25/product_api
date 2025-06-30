@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "dotenvx run -f .env.development -- npx ts-node-dev src/index.ts",
+    "start": "NODE_ENV=prodcution dotenvx run -f .env.production -- npx ts-node-dev src/index.ts",
     "dev": "dotenvx run -f .env.development -- npx ts-node-dev src/index.ts",
     "dev:env:encrypt": "dotenvx encrypt -f .env.development",
-    "dev:env:decrypt": "dotenvx decrypt -f .env.development",
-    "start:prod": "NODE_ENV=prodcution dotenvx run -f .env.prodcution -- npx ts-node-dev src/index.ts"
+    "dev:env:decrypt": "dotenvx decrypt -f .env.development"
   },
   "keywords": [],
   "author": "",
