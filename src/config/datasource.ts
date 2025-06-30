@@ -20,6 +20,6 @@ export const AppDataSource = new DataSource({
   logging: false,
   entities: [Product],
   ssl: {
-    rejectUnauthorized: true, // Enforce certificate validation
+    rejectUnauthorized: process.env.NODE_ENV === "production" ? true : false, // Enforce certificate validation
   },
 });
